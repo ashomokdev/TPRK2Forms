@@ -14,42 +14,46 @@ namespace TPRKForms2
 
         public Table(int inputx)
         {
+            int tempSum = 0;
             Rows = new List<Row>();
             Row.x = inputx;
             for (int i = 0; i < RowsCount; i++)
             {
                 Row row = new Row();
                 Rows.Add(row);
+                tempSum = tempSum + row.Win;
             }
+            Average = tempSum / RowsCount;
         }
 
         public List<Row> Rows { get; set; }
+        public int Average { get; set; }
 
         public class Row
         {
             public static int x { get; set; }
-            private int win { get; set; }
-            private int Y { get; set; }
+            public int Win { get; set; }
+            public int Y { get; set; }
 
             public Row()
             {
                 Random random = new Random();
-                Thread.Sleep(100);
+                Thread.Sleep(25);
                 Y = random.Next(MinValue, MaxValue + 1);
                 if (Y >= x)
                 {
-                    win = Y;
+                    Win = Y;
                 }
                 else
                 {
                     bool won = random.NextDouble() < 0.5;
                     if (won)
                     {
-                        win = MaxValue;
+                        Win = MaxValue;
                     }
                     else
                     {
-                        win = MinValue;
+                        Win = MinValue;
                     }
                 }
             }
