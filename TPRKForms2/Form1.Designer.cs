@@ -35,9 +35,13 @@
             this.inputx = new System.Windows.Forms.Label();
             this.buttonPlay = new System.Windows.Forms.Button();
             this.dataGridViewTable = new System.Windows.Forms.DataGridView();
+            this.N = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.x = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vvY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Win = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxAverage = new System.Windows.Forms.TextBox();
+            this.labelAverage = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,14 +95,21 @@
             this.dataGridViewTable.AllowUserToOrderColumns = true;
             this.dataGridViewTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.N,
             this.x,
             this.vvY,
             this.Win});
             this.dataGridViewTable.Location = new System.Drawing.Point(51, 284);
             this.dataGridViewTable.Name = "dataGridViewTable";
             this.dataGridViewTable.ReadOnly = true;
-            this.dataGridViewTable.Size = new System.Drawing.Size(342, 150);
+            this.dataGridViewTable.Size = new System.Drawing.Size(441, 150);
             this.dataGridViewTable.TabIndex = 5;
+            // 
+            // N
+            // 
+            this.N.HeaderText = "№";
+            this.N.Name = "N";
+            this.N.ReadOnly = true;
             // 
             // x
             // 
@@ -118,11 +129,40 @@
             this.Win.Name = "Win";
             this.Win.ReadOnly = true;
             // 
+            // textBoxAverage
+            // 
+            this.textBoxAverage.Location = new System.Drawing.Point(388, 470);
+            this.textBoxAverage.Name = "textBoxAverage";
+            this.textBoxAverage.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAverage.TabIndex = 6;
+            // 
+            // labelAverage
+            // 
+            this.labelAverage.AutoSize = true;
+            this.labelAverage.Location = new System.Drawing.Point(388, 451);
+            this.labelAverage.Name = "labelAverage";
+            this.labelAverage.Size = new System.Drawing.Size(92, 13);
+            this.labelAverage.TabIndex = 7;
+            this.labelAverage.Text = "Середній виграш";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(494, 554);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Будувати функцію корисності ->";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 608);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.labelAverage);
+            this.Controls.Add(this.textBoxAverage);
             this.Controls.Add(this.dataGridViewTable);
             this.Controls.Add(this.buttonPlay);
             this.Controls.Add(this.inputx);
@@ -145,9 +185,13 @@
         private System.Windows.Forms.Label inputx;
         private System.Windows.Forms.Button buttonPlay;
         private System.Windows.Forms.DataGridView dataGridViewTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn N;
         private System.Windows.Forms.DataGridViewTextBoxColumn x;
         private System.Windows.Forms.DataGridViewTextBoxColumn vvY;
         private System.Windows.Forms.DataGridViewTextBoxColumn Win;
+        private System.Windows.Forms.TextBox textBoxAverage;
+        private System.Windows.Forms.Label labelAverage;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -24,8 +24,21 @@ namespace TPRKForms2
             {
                 Table table = new Table(input);
                 List <TPRKForms2.Table.Row> rows = table.Rows;
-                dataGridViewTable.Rows.Add(rows);
-            }
+                int n = 1;
+                foreach(var row in rows)
+                {
+                    string[] tableRow = new string[] {n.ToString(), Table.Row.x.ToString(), row.Y.ToString(), row.Win.ToString() };
+                    dataGridViewTable.Rows.Add(tableRow);
+                    n++;
+                }
+                textBoxAverage.Text = table.Average.ToString();
+            }           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
         }
     }
 }
