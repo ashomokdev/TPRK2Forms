@@ -17,5 +17,14 @@ namespace TPRKForms2
             InitializeComponent();
         }
 
+        private void buttonGreate_Click(object sender, EventArgs e)
+        {
+            int input = 0;
+            if (textBoxk.Text.Length > 0 && Int32.TryParse(textBoxk.Text, out input))
+            {
+                double ;
+            }
+        }
+
     }
 }

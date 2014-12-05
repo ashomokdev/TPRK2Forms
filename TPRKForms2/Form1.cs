@@ -15,6 +15,8 @@ namespace TPRKForms2
         public Form1()
         {
             InitializeComponent();
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
         }
 
         private void buttonPlay_Click(object sender, EventArgs e)
